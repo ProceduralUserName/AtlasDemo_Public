@@ -1,0 +1,11 @@
+
+
+
+Some Basic Rules for the demo (known bugs)
+
+ - Don't change the Distance per square while fences are on the grid. Not everything will update to reflect the new measurement so just avoid that. 
+ - Don't delete the last fence from the grid, just use the clear button. If you want to display the context menu (you should, it's sick) then make sure you have more than 1 fence on the grid.
+   (Not a big deal if you forget, nothing will break. Will just get NaN as fence totals until you reset or draw another fence.)
+ - Don't try and move the gates with their blue control points, they don't work. The dot will move and snap to a fence but the box stays.
+ - Trees delete in FILO (First In Last Out). If you want to use the context menu to delete a tree, make sure it's the most recently placed one. Not a big deal if you forget.
+ - 

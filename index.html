@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Fencing Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="totals-bar" id="totalsBar">
+        <div id="woodTotal">Wood: 0 ft</div>
+        <div id="chainlinkTotal">Chainlink: 0 ft</div>
+        <div id="plasticTotal">Plastic: 0 ft</div>
+        <div id="gatesTotal">Gates: 0 ft</div>
+    </div>
+    <div class="container">
+        
+
+        <div class="main-content">
+            <div class="sidebar">
+
+                <div id="toolGroup" class="materialHeader">Grid Settings
+                    <hr>
+                    <label for="distanceMultiplier">Distance per square: </label>
+                    <input type="number" id="distanceMultiplier" name="distanceMultiplier" value="1">
+<br>
+                    <label for="gridSize">Grid Size: </label>
+                    <input type="number" id="gridSize" name="gridSize" value="50">
+                    <hr>
+                    
+                    </div>
+
+                <div id="toolGroup" class="materialHeader">Tools
+                <hr>
+                <button class="button-28" role="button"  id="fenceMode">Draw Fences</button>
+                <button class="button-28" role="button"  id="gateMode">Add Gate</button>
+                <button class="button-28" role="button"  id="selectMode">Edit</button>
+                <!-- <button class="button-28" role="button"  id="removeMode"  >Remove Tool</button> -->
+                <hr>
+                
+                </div>
+                
+                <div id="objectGroup" class="materialHeader">Objects
+                    <hr>
+                    <select id="objectDropdown" class="dropdown">
+                        <option value="" disabled selected>Select an object</option>
+                        <option value="Tree">Tree</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Bench">Bench</option>
+                    </select>
+                    <hr>
+                </div>
+                
+                
+                <div id="toolGroup" class="materialHeader">Materials
+                    <div id="currentMaterialDisplay" class="materialDisplay"></div>
+                    <hr>
+                    <button class="button-28" role="button" id="wood">Wooden</button>
+                    <button class="button-28" role="button" id="chainlink">Chainlink</button>
+                    <button class="button-28" role="button" id="plastic">Plastic</button>
+                    <hr>
+                </div>
+                <button class="button-28-alt" role="button"  id="clear">Clear</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="sidebar-alt">
+            <div id="toolGroup" class="materialHeader">Lengths
+                <hr>
+                <ul  id="lengthsList"></ul>
+            </div>
+           
+        </div>
+    </div>
+
+
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="contextInfo">Info: Length - , Material - </li>
+            <li id="deleteOption">Delete</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="grid.js"></script>
+    <script src="customLine.js"></script>
+    <script src="objects.js"></script>
+    <script src="script.js"></script>
+    <script src="gates.js"></script>
+    <script src="toolbox.js"></script>
+    <script src="utility.js"></script> <!-- Include the utility file -->
+    <script src="materialHandling.js"></script>
+    <script src="context.js"></script>
+
+
+    
+
+</body>
+</html>
